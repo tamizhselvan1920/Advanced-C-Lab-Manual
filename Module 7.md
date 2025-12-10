@@ -1,7 +1,6 @@
 
 EXP NO:1 C PROGRAM FOR ARRAY OF STRUCTURE TO CHECK ELIGIBILITY FOR THE VACCINE.
 
-
 Aim:
 To write a C program for array of structure to check eligibility for the vaccine person age above 6 years of age.
 
@@ -18,36 +17,35 @@ Else
  
 Program:
 ```
-#include<stdio.h> 
-struct eligible
+#include<stdio.h>
+struct eligib
 {
-int age; char n[4];
+int age;
+char n[4];
 };
 int main()
 {
-struct eligible; scanf("%d%s",&e.age,e.n);
+struct eligib e;
+scanf("%d%s",&e.age,e.n);
 if(e.age<=6)
 {
 printf("Age:%d\nName:%svaccine:%d\neligibility:no",e.age,e.n,e.age);
-} 
+}
 else
 {
 printf("Age:%d\nName:%svaccine:%d\neligibility:yes",e.age,e.n,e.age);
-
 }
 }
 ```
 
+
 Output:
 
-
-![437295418-875d7abd-3282-4d64-96f7-b69834282f0a](https://github.com/user-attachments/assets/bbf7f61d-81ff-47ae-a7d7-85e1e36215dd)
-
+<img width="742" height="288" alt="Screenshot 2025-10-24 082516" src="https://github.com/user-attachments/assets/f2aed35e-a16f-46e1-8f8c-49e255aa6399" />
 
 
 
 Result:
-
 Thus, the program is verified successfully. 
 
 
@@ -66,38 +64,38 @@ Algorithm:
 7.	Return 0
  
 Program:
-```
- #include<stdio.h>
-       struct numbers{
-               int a;
-               int b;
-       }n;
-       int add(struct numbers n);
-       int main()
-       {
-           scanf("%d %d ",&n.a,&n.b);
-           printf("%d",add(n));
-       }
-       int add(struct numbers n)
-       {
-            return n.a+n.b;
-       }
-
-
 
 ```
+#include<stdio.h>
+struct numbers
+{
+int a;
+int b;
+}n;
+int add(struct numbers n);
+int main()
+{
+scanf("%d %d ",&n.a,&n.b);
+printf("%d",add(n));
+}
+int add(struct numbers n)
+{
+return n.a+n.b;
+}
+
+```
+
 
 
 Output:
 
+<img width="275" height="312" alt="image" src="https://github.com/user-attachments/assets/c742b37d-ea4b-4adb-b7a6-0192e992de98" />
 
-![437295527-c4fda8ea-7b67-47c2-9123-dfdae6e283a6](https://github.com/user-attachments/assets/22589bbf-cfd5-4a85-8783-af5a00ecfd99)
 
 
 
 
 Result:
-
 Thus, the program is verified successfully
 
 
@@ -127,28 +125,24 @@ Use scanf to input the file name into the name array.
 Program:
 
 ```
-            #include <stdio.h>
-            int main()
-            {
-                 FILE *p;
-                 char name[30];
-                 scanf("%s",name);
-                 printf("%s File Created Successfully",name); 
-                 p=fopen("name","w");
-                 printf("\n%s File Opened",name);
-                 fclose(p);
-                 printf("\n%s File Closed",name);
-           }
-
-
-
+#include <stdio.h>
+int main()
+{
+FILE *p;
+char name[30]; scanf("%s",name);
+printf("%s File Created Successfully",name); p=fopen("name","w");
+printf("\n%s File Opened",name); fclose(p);
+printf("\n%s File Closed",name);
+}
 ```
+
 
 
 Output:
 
 
-![437295636-26ae7632-11c8-4c2e-9627-3848ad724e46](https://github.com/user-attachments/assets/86a2a691-e2f1-4bc7-b5f2-f0c8d098392b)
+<img width="795" height="262" alt="image" src="https://github.com/user-attachments/assets/e02f621f-bc31-4da7-a601-b7dd6045809d" />
+
 
 
 
@@ -160,8 +154,6 @@ Output:
 
 
 Result:
-
-
 Thus, the program is verified successfully
  
 
@@ -187,34 +179,32 @@ Use scanf to input the file name into the name array and the number of strings i
 5.	Return 0 to indicate successful program execution.
  
 Program:
-```
-           #include <stdio.h>
-            int main()
-            {
-                 FILE *p;
-                 char name[20];
-                 int num;
-                 char text[50];
-                 scanf("%s%d",name,&num);
-                 p=fopen("name","w");
-                 printf("%s Opened",name);
-                 for(int i=0;i<num;i++)
-                 {
-                     scanf("%s",text); fputs(text,p);
-                 }
-                 printf("\nData added Successfully");
-
-            }
-
 
 ```
+#include <stdio.h>
+int main()
+{
+FILE *p;
+char name[20]; int num;
+char text[50];
+scanf("%s%d",name,&num);
+p=fopen("name","w");
+printf("%s Opened",name);
+for(int i=0;i<num;i++)
+{
+scanf("%s",text);
+fputs(text,p);
+}
+printf("\nData added Successfully");
+}
+```
+
 
 
 Output:
 
 
-
-![437295751-4a926356-22df-4a11-a5f8-6f7b374e2a86](https://github.com/user-attachments/assets/612f8dfc-29a7-462f-9eea-4c419e98e649)
+<img width="660" height="303" alt="image" src="https://github.com/user-attachments/assets/e9337b52-2e3e-48d0-9a52-d4f6d215582c" />
 
 
 
@@ -222,8 +212,6 @@ Output:
 
 
 Result:
-
-
 Thus, the program is verified successfully
 
 
@@ -261,50 +249,44 @@ Algorithm:
 13.End the program by returning 0.
 
 Program:
-```
- #include <stdio.h>
-           #include <stdlib.h>
-           struct Subject
-           {
-               char name[20];
-               int marks;
-           };
-           int main()
-           {
-                int i,n;
-                scanf("%d",&n);
-                struct Subject *s = (struct Subject *)malloc(n*sizeof(struct Subject));
-                if(s==NULL)
-                {
-                    printf("Memory Alocation Failed\n");
-                    return 1;
-                }
-                for(i=0;i<n;i++)
-                {
-                    scanf("%s %d",s[i].name,&s[i].marks);
-                }
-                for(i=0;i<n;i++)
-                {
-                    printf("%s  %d\n",s[i].name,s[i].marks);
-                }
-                free (s);
-    
-                return 0;
-           }
 
 ```
-
-
-
+#include <stdio.h>
+#include <stdlib.h>
+struct Subject
+{
+char name[20];
+int marks;
+};
+int main()
+{
+int i,n;
+scanf("%d",&n);
+struct Subject *s = (struct Subject *)malloc(n*sizeof(struct Subject));
+if(s==NULL)
+{
+printf("Memory Alocation Failed\n");
+return 1;
+}
+for(i=0;i<n;i++)
+{
+scanf("%s %d",s[i].name,&s[i].marks);
+}
+for(i=0;i<n;i++)
+{
+printf("%s %d\n",s[i].name,s[i].marks);
+}
+free (s);
+return 0;
+}
+```
 
 
 
 Output:
 
+<img width="752" height="473" alt="image" src="https://github.com/user-attachments/assets/9f58432e-cb79-42df-ae57-194439afef9d" />
 
-
-
-![437295856-297a272e-1888-4dcc-a7ce-9b03c9c2bac3](https://github.com/user-attachments/assets/0d7d0e7c-f4d2-485e-a311-1d675cd3b2ca)
 
 
 
@@ -312,6 +294,4 @@ Output:
 
 
 Result:
-
-
 Thus, the program is verified successfully
